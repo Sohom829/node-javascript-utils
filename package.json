@@ -1,0 +1,41 @@
+{
+  "name": "node-javascript-utils",
+  "version": "1.0.0",
+  "description": "The NodeJavaScript module is a collection of functions for manipulating strings.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "test": "npx jest",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sohom829/node-javascript-utils.git"
+  },
+  "keywords": [
+    "Node",
+    "String",
+    "Utils",
+    "NodeString",
+    "NodeStringUtils",
+    "Node",
+    "String",
+    "Utils"
+  ],
+  "author": "Mohtasim Alam Sohom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sohom829/node-javascript-utils/issues"
+  },
+  "homepage": "https://github.com/Sohom829/node-javascript-utils#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.9"
+  }
+}
