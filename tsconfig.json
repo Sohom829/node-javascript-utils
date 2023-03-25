@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "alwaysStrict": true,
+    "declaration": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "target": "ES3",
+    "module": "CommonJS",
+    "pretty": true,
+    "newLine": "crlf"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
