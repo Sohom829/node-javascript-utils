@@ -19,6 +19,13 @@ type SubstringOutput = string;
 type PadInput = [number, string?];
 type PadOutput = string;
 
+class StringUtilsTypeError extends TypeError {
+  constructor(...message: any[]) {
+    super(message.join(" "));
+    this.name = "StringUtilsTypeError";
+  }
+}
+
 export module StringUtils {
   /**
    * Trims whitespace from both ends of a string.
@@ -26,6 +33,17 @@ export module StringUtils {
    * @returns The trimmed string.
    */
   export function trim(str: TrimInput): TrimOutput {
+    if (typeof str !== "string") {
+      throw new StringUtilsTypeError(
+        "Expected",
+        '"' + "str" + '"',
+        "to be",
+        "`string`",
+        "but got",
+        typeof str,
+        "instead"
+      );
+    }
     return str.trim();
   }
 
@@ -35,6 +53,17 @@ export module StringUtils {
    * @returns The uppercase string.
    */
   export function toUpperCase(str: UppercaseInput): UppercaseOutput {
+    if (typeof str !== "string") {
+      throw new StringUtilsTypeError(
+        "Expected",
+        '"' + "str" + '"',
+        "to be",
+        "`string`",
+        "but got",
+        typeof str,
+        "instead"
+      );
+    }
     return str.toUpperCase();
   }
 
@@ -44,6 +73,17 @@ export module StringUtils {
    * @returns The lowercase string.
    */
   export function toLowerCase(str: LowercaseInput): LowercaseOutput {
+    if (typeof str !== "string") {
+      throw new StringUtilsTypeError(
+        "Expected",
+        '"' + "str" + '"',
+        "to be",
+        "`string`",
+        "but got",
+        typeof str,
+        "instead"
+      );
+    }
     return str.toLowerCase();
   }
 
@@ -53,6 +93,17 @@ export module StringUtils {
    * @returns The number of characters in the string.
    */
   export function countCharacters(str: CharCountInput): CharCountOutput {
+    if (typeof str !== "string") {
+      throw new StringUtilsTypeError(
+        "Expected",
+        '"' + "str" + '"',
+        "to be",
+        "`string`",
+        "but got",
+        typeof str,
+        "instead"
+      );
+    }
     return str.length;
   }
   /**
@@ -67,6 +118,28 @@ export module StringUtils {
     replace: ReplaceInput,
     withStr: string
   ): ReplaceOutput {
+    if (typeof str !== "string") {
+      throw new StringUtilsTypeError(
+        "Expected",
+        '"' + "str" + '"',
+        "to be",
+        "`string`",
+        "but got",
+        typeof str,
+        "instead"
+      );
+    }
+    if (typeof withStr !== "string") {
+      throw new StringUtilsTypeError(
+        "Expected",
+        '"' + "withStr" + '"',
+        "to be",
+        "`string`",
+        "but got",
+        typeof withStr,
+        "instead"
+      );
+    }
     return str.split(replace[0]).join(withStr);
   }
 
@@ -81,6 +154,17 @@ export module StringUtils {
     str: string,
     [start, end]: SubstringInput
   ): SubstringOutput {
+    if (typeof str !== "string") {
+      throw new StringUtilsTypeError(
+        "Expected",
+        '"' + "str" + '"',
+        "to be",
+        "`string`",
+        "but got",
+        typeof str,
+        "instead"
+      );
+    }
     return str.substring(start, end);
   }
 
