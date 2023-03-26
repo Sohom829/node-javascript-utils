@@ -8,6 +8,7 @@ interface ErrorOptions {
   message: string;
   code: ErrorCode;
   status?: number;
+  [key: string]: any;
 }
 
 class CustomError extends Error {
